@@ -1,0 +1,370 @@
+/* Neutral Harmony Bliss */
+:root {
+    --cream: #f4f1de;
+    --terracotta: #e07a5f;
+    --sage: #81b29a;
+    --ink: #282820;
+    --rust: #943f2e;
+    --paper: #fffaf0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3, p, figure {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 4px;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+/* Horizontal navigation */
+header {
+    border-bottom: 1px solid var(--ink);
+}
+
+nav {
+    width: min(94%, 1120px);
+    min-height: 74px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: clamp(4px, 2vw, 22px);
+}
+
+nav a {
+    display: block;
+    padding: 12px 7px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+nav a:hover,
+nav a.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+nav .logo {
+    flex-shrink: 0;
+    width: 88px;
+    padding: 0;
+}
+
+nav .logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+nav .order,
+.button {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid var(--ink);
+    border-radius: 30px;
+    background: var(--terracotta);
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button:hover,
+nav .order:hover {
+    background: var(--paper);
+}
+
+/* Big headline */
+main,
+.footer-inner {
+    width: min(92%, 1120px);
+    margin: auto;
+}
+
+.hero {
+    padding: clamp(44px, 7vw, 92px) 0 44px;
+    text-align: center;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.hero .eyebrow span {
+    margin: 0 4px;
+    color: var(--rust);
+}
+
+.hero h1 {
+    margin: 12px 0 16px;
+    font: bold clamp(40px, 9vw, 112px)/0.95 Georgia, serif;
+    letter-spacing: -0.065em;
+}
+
+.hero h1 em {
+    padding-right: 0.06em;
+    color: var(--rust);
+}
+
+.intro {
+    font-size: clamp(16px, 2vw, 19px);
+}
+
+.hero .button {
+    margin-top: 22px;
+    background: var(--ink);
+    color: var(--cream);
+}
+
+.hero .button:hover {
+    background: var(--terracotta);
+    color: var(--ink);
+}
+
+/* Menu illustrations */
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    border-top: 1px solid var(--ink);
+}
+
+.section-top a {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: clamp(12px, 2vw, 24px);
+}
+
+.food-card {
+    overflow: hidden;
+    border: 1px solid var(--ink);
+    border-radius: 18px;
+    background: var(--paper);
+    box-shadow: 3px 4px 0 var(--ink);
+}
+
+.shake { --card-color: var(--sage); }
+.burger { --card-color: var(--terracotta); }
+.fries { --card-color: #e8d7aa; }
+
+.food-picture {
+    display: grid;
+    place-items: center;
+    height: clamp(155px, 20vw, 230px);
+    overflow: hidden;
+    border-bottom: 1px solid var(--ink);
+    background:
+        radial-gradient(ellipse at center, #ffffff38, transparent 70%),
+        var(--card-color);
+}
+
+.food-picture svg {
+    width: 92%;
+    height: 92%;
+    stroke: var(--ink);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.shadow {
+    fill: var(--ink);
+    stroke: none;
+    opacity: 0.15;
+}
+
+.spark, .seeds {
+    fill: none;
+}
+
+.seeds {
+    stroke: var(--paper);
+    stroke-width: 4;
+}
+
+figcaption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+}
+
+.card-number {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--ink);
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+figcaption h3 {
+    font: bold clamp(19px, 3vw, 29px)/1.1 Georgia, serif;
+}
+
+figcaption p {
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+/* Address and contact */
+.visit {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr auto;
+    align-items: center;
+    gap: 18px;
+    margin: 54px 0;
+    padding: clamp(18px, 4vw, 36px);
+    border: 1px solid var(--ink);
+    border-radius: 18px;
+    background: var(--sage);
+}
+
+.visit h2 {
+    margin-top: 4px;
+    font: bold clamp(26px, 4vw, 40px)/1 Georgia, serif;
+}
+
+.visit .button {
+    justify-self: start;
+    background: var(--paper);
+}
+
+.visit .button:hover {
+    background: var(--cream);
+}
+
+footer {
+    background: var(--ink);
+    color: var(--cream);
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 28px 0;
+}
+
+.footer-name {
+    font: bold 24px Georgia, serif;
+}
+
+.footer-name span {
+    color: var(--terracotta);
+}
+
+footer a {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+/* Phone layout. The nav links stay in a horizontal row. */
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: 12px 0;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding-inline: 5px;
+    }
+
+    nav .order {
+        padding-inline: 9px;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .burger {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .burger .food-picture {
+        height: 210px;
+    }
+
+    figcaption {
+        padding: 10px;
+    }
+
+    .card-number {
+        display: none;
+    }
+
+    .visit {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .visit > div,
+    .visit .button {
+        grid-column: 1 / -1;
+    }
+}
+.food-picture {
+    display: block;
+}
+
+.food-picture img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
