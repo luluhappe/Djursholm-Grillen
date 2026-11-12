@@ -1,0 +1,179 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse burgers, sides, and milkshakes at Djursholmsgrillen.">
+    <title>Menu | Djursholmsgrillen</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <a class="logo" href="Home.html" aria-label="Djursholmsgrillen home">
+                <img src="images/burgerlogo.jpg" alt="">
+            </a>
+
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a class="active" href="Menu.html" aria-current="page">Menu</a></li>
+                <li><a href="Visit.html">Visit</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a class="order" href="https://yabie.online/djursholmsgrillen/en">
+                        Order <span aria-hidden="true">↗</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="menu-page">
+        <section class="menu-hero" aria-labelledby="menu-title">
+            <p class="eyebrow">Djursholmsgrillen</p>
+            <h1 id="menu-title">The <em>Menu</em></h1>
+            <p class="intro">Burgers, crispy fries, and cold milkshakes.</p>
+        </section>
+
+        <div class="menu-grid">
+            <!-- Left column -->
+            <section class="menu-panel menu-sides" aria-labelledby="sides-title">
+                <div class="menu-panel-heading">
+                    <p class="eyebrow">On the side</p>
+                    <h2 id="sides-title">Sides</h2>
+                </div>
+
+                <img src="images/menufries.jpg" alt="Fries in a Djursholmsgrillen bag with a cup of dip">
+
+                <ul class="menu-items">
+                    <li>
+                        <div class="menu-item-line">
+                            <strong>Small Fries &amp; Dip</strong>
+                            <span class="menu-price">39 kr</span>
+                        </div>
+                        <p>Served with aioli. Available with a burger purchase.</p>
+                    </li>
+                    <li>
+                        <div class="menu-item-line">
+                            <strong>Sharing Fries</strong>
+                            <span class="menu-price">89 kr</span>
+                        </div>
+                        <p>A large box of fries with three dips.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Center column -->
+            <section class="menu-panel menu-burgers" aria-labelledby="burgers-title">
+                <div class="menu-panel-heading">
+                    <p class="eyebrow">From the grill</p>
+                    <h2 id="burgers-title">Burgers</h2>
+                </div>
+
+                <img src="images/menuburger.jpg" alt="A burger from Djursholmsgrillen">
+                <p class="menu-price-guide">Prices show burger only / combo, where available.</p>
+
+                <ul class="menu-items">
+                    <li>
+                        <div class="menu-item-line">
+                            <strong>Mini Smash</strong>
+                            <span class="menu-price">79 / 99 kr</span>
+                        </div>
+                        <p>90 g beef patty, cheddar, and brioche.</p>
+                    </li>
+                    <li>
+                        <div class="menu-item-line">
+                            <strong>DG Original</strong>
+                            <span class="menu-price">119 / 169 kr</span>
+                        </div>
+                        <p>Beef, cheddar, tomato, basil, and pickled onion.</p>
+                    </li>
+                    <li>
+                        <div class="menu-item-line">
+                            <strong>U’Mami</strong>
+                            <span class="menu-price">179 / 233 kr</span>
+                        </div>
+                        <p>Beef, aged cheddar, mushrooms, and Gotland truffle.</p>
+                    </li>
+                    <li>
+                        <div class="menu-item-line">
+                            <strong>Chêesez</strong>
+                            <span class="menu-price">176 / 229 kr</span>
+                        </div>
+                        <p>Beef, cheddar, Västerbotten cheese cream, and house mustard.</p>
+                    </li>
+                    <li>
+                        <div class="menu-item-line">
+                            <strong>Stark</strong>
+                            <span class="menu-price">168 / 219 kr</span>
+                        </div>
+                        <p>Beef, jalapeño cheddar, coffee gochujang, and kimchi.</p>
+                    </li>
+                    <li>
+                        <div class="menu-item-line">
+                            <strong>Husman</strong>
+                            <span class="menu-price">273 / 319 kr</span>
+                        </div>
+                        <p>Swedish Wagyu, cheddar, and apple Dijonnaise.</p>
+                    </li>
+                    <li>
+                        <div class="menu-item-line">
+                            <strong>Naked Smash</strong>
+                            <span class="menu-price">99 / 149 kr</span>
+                        </div>
+                        <p>150 g beef patty with aged cheddar.</p>
+                    </li>
+                    <li>
+                        <div class="menu-item-line">
+                            <strong>Double Trouble</strong>
+                            <span class="menu-price">149 / 199 kr</span>
+                        </div>
+                        <p>The monthly special with two beef patties, cheddar, and coleslaw.</p>
+                    </li>
+                    <li>
+                        <div class="menu-item-line">
+                            <strong>Cheezy Wagyu</strong>
+                            <span class="menu-price">199 kr</span>
+                        </div>
+                        <p>Wagyu with smoked and jalapeño cheddar. Comes with a shake.</p>
+                    </li>
+                </ul>
+
+                <p class="menu-price-guide"><strong>Lunch combo</strong> · 199 kr on select burgers.</p>
+            </section>
+
+            <!-- Right column -->
+            <section class="menu-panel menu-drinks" aria-labelledby="shakes-title">
+                <div class="menu-panel-heading">
+                    <p class="eyebrow">Something cold</p>
+                    <h2 id="shakes-title">Milkshakes</h2>
+                </div>
+
+                <img src="images/milkshake.jpg" alt="A milkshake from Djursholmsgrillen">
+                <p class="menu-price-guide">Available with select combos. Price depends on the combo.</p>
+
+                <ul class="menu-items">
+                    <li><strong>Pear</strong></li>
+                    <li><strong>Banana</strong></li>
+                    <li><strong>Strawberry</strong></li>
+                    <li><strong>Vanilla</strong></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p class="footer-name">
+                Djursholmsgrillen <span aria-hidden="true">✦</span>
+            </p>
+            <div>
+                <h2 class="eyebrow">Contact</h2>
+                <a href="tel:+46737876682">073-787 66 82</a>
+                <a href="mailto:jon@djursholmsgrillen.se">jon@djursholmsgrillen.se</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

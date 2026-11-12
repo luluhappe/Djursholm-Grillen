@@ -1,4 +1,4 @@
-/* Neutral Harmony Bliss */
+/* Colors */
 :root {
     --cream: #f4f1de;
     --terracotta: #e07a5f;
@@ -34,28 +34,35 @@ a:focus-visible {
     outline-offset: 4px;
 }
 
+main,
+.footer-inner {
+    width: min(92%, 1120px);
+    margin: 0 auto;
+}
+
 /* Horizontal navigation */
 header {
     border-bottom: 1px solid var(--ink);
 }
 
 nav {
-    width: min(94%, 1120px);
-    min-height: 74px;
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+    width: min(94%, 1120px);
+    min-height: 74px;
+    margin: 0 auto;
+    padding: 8px 0;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     align-items: center;
     gap: clamp(4px, 2vw, 22px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 nav a {
@@ -86,7 +93,6 @@ nav .logo img {
     border-radius: 8px;
 }
 
-
 nav .order,
 .button {
     display: inline-block;
@@ -100,20 +106,15 @@ nav .order,
     text-decoration: none;
 }
 
-.button:hover,
-nav .order:hover {
+nav .order:hover,
+.button:hover {
     background: var(--paper);
 }
 
-/* Big headline */
-main,
-.footer-inner {
-    width: min(92%, 1120px);
-    margin: auto;
-}
-
-.hero {
-    padding: clamp(44px, 7vw, 92px) 0 44px;
+/* Homepage and menu page headings */
+.hero,
+.menu-hero {
+    padding: clamp(40px, 7vw, 84px) 0 40px;
     text-align: center;
 }
 
@@ -124,19 +125,20 @@ main,
     text-transform: uppercase;
 }
 
-.hero .eyebrow span {
-    margin: 0 4px;
+.hero .eyebrow span,
+.menu-hero .eyebrow {
     color: var(--rust);
 }
 
-.hero h1 {
+.hero h1,
+.menu-hero h1 {
     margin: 12px 0 16px;
-    font: bold clamp(40px, 9vw, 112px)/0.95 Georgia, serif;
-    letter-spacing: -0.065em;
+    font: bold clamp(40px, 9vw, 108px)/0.95 Georgia, serif;
+    letter-spacing: -0.06em;
 }
 
-.hero h1 em {
-    padding-right: 0.06em;
+.hero h1 em,
+.menu-hero h1 em {
     color: var(--rust);
 }
 
@@ -155,11 +157,15 @@ main,
     color: var(--ink);
 }
 
-/* Menu illustrations */
+.hero .button:focus-visible {
+    outline-color: var(--ink);
+}
+
+/* Homepage photo cards */
 .section-top {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 16px;
     padding: 12px 0;
     border-top: 1px solid var(--ink);
@@ -170,13 +176,15 @@ main,
     font-weight: bold;
 }
 
-.food-grid {
+.food-grid,
+.menu-grid {
     display: grid;
-    grid-template-columns: 1fr 1.4fr 1fr;
-    gap: clamp(12px, 2vw, 24px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: clamp(14px, 2vw, 24px);
 }
 
-.food-card {
+.food-card,
+.menu-panel {
     overflow: hidden;
     border: 1px solid var(--ink);
     border-radius: 18px;
@@ -184,46 +192,25 @@ main,
     box-shadow: 3px 4px 0 var(--ink);
 }
 
-.shake { --card-color: var(--sage); }
-.burger { --card-color: var(--terracotta); }
-.fries { --card-color: #e8d7aa; }
-
 .food-picture {
-    display: grid;
-    place-items: center;
     height: clamp(155px, 20vw, 230px);
     overflow: hidden;
     border-bottom: 1px solid var(--ink);
-    background:
-        radial-gradient(ellipse at center, #ffffff38, transparent 70%),
-        var(--card-color);
 }
 
-.food-picture svg {
-    width: 92%;
-    height: 92%;
-    stroke: var(--ink);
-    stroke-width: 3;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+.food-picture img,
+.menu-panel > img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-.shadow {
-    fill: var(--ink);
-    stroke: none;
-    opacity: 0.15;
+.food-picture img {
+    height: 100%;
 }
 
-.spark, .seeds {
-    fill: none;
-}
-
-.seeds {
-    stroke: var(--paper);
-    stroke-width: 4;
-}
-
-figcaption {
+.food-card figcaption {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -232,7 +219,7 @@ figcaption {
 
 .card-number {
     display: grid;
-    flex: none;
+    flex-shrink: 0;
     place-items: center;
     width: 28px;
     height: 28px;
@@ -242,22 +229,22 @@ figcaption {
     font-weight: bold;
 }
 
-figcaption h3 {
+.food-card h3 {
     font: bold clamp(19px, 3vw, 29px)/1.1 Georgia, serif;
 }
 
-figcaption p {
+.food-card p {
     margin-top: 4px;
     font-size: 14px;
 }
 
-/* Address and contact */
+/* Visit section */
 .visit {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr auto;
     align-items: center;
     gap: 18px;
-    margin: 54px 0;
+    margin: 48px 0;
     padding: clamp(18px, 4vw, 36px);
     border: 1px solid var(--ink);
     border-radius: 18px;
@@ -266,7 +253,7 @@ figcaption p {
 
 .visit h2 {
     margin-top: 4px;
-    font: bold clamp(26px, 4vw, 40px)/1 Georgia, serif;
+    font: bold clamp(26px, 4vw, 40px)/1.05 Georgia, serif;
 }
 
 .visit .button {
@@ -278,6 +265,95 @@ figcaption p {
     background: var(--cream);
 }
 
+/* Menu page */
+.menu-page {
+    padding-bottom: 48px;
+}
+
+.menu-grid {
+    grid-template-areas: "sides burgers drinks";
+    align-items: start;
+}
+
+.menu-sides {
+    grid-area: sides;
+    --panel-color: var(--sage);
+}
+
+.menu-burgers {
+    grid-area: burgers;
+    --panel-color: var(--terracotta);
+}
+
+.menu-drinks {
+    grid-area: drinks;
+    --panel-color: #e8d7aa;
+}
+
+.menu-panel-heading {
+    padding: 18px;
+    background: var(--panel-color);
+}
+
+.menu-panel-heading h2 {
+    margin-top: 4px;
+    font: bold clamp(24px, 3vw, 38px)/1.05 Georgia, serif;
+}
+
+.menu-panel > img {
+    height: clamp(155px, 19vw, 220px);
+    border-block: 1px solid var(--ink);
+}
+
+.menu-items {
+    margin: 0;
+    padding: 0 18px 6px;
+    list-style: none;
+}
+
+.menu-items li {
+    padding: 13px 0;
+}
+
+.menu-items li + li {
+    border-top: 1px dashed #aaa591;
+}
+
+.menu-item-line {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.menu-items strong {
+    font: bold 18px Georgia, serif;
+}
+
+.menu-price {
+    color: var(--rust);
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.menu-items p {
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.menu-price-guide {
+    padding: 10px 18px;
+    background: var(--cream);
+    font-size: 13px;
+}
+
+/* Hide the old "Ready to order?" banner. */
+.menu-order {
+    display: none;
+}
+
+/* Footer */
 footer {
     background: var(--ink);
     color: var(--cream);
@@ -305,47 +381,18 @@ footer a {
     font-size: 14px;
 }
 
-/* Phone layout. The nav links stay in a horizontal row. */
-@media (max-width: 650px) {
-    nav {
-        flex-direction: column;
-        justify-content: center;
-        padding: 12px 0;
+/* Smaller screens */
+@media (max-width: 720px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "burgers"
+            "sides"
+            "drinks";
     }
 
-    nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    nav a {
-        font-size: 13px;
-        padding-inline: 5px;
-    }
-
-    nav .order {
-        padding-inline: 9px;
-    }
-
-    .food-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .burger {
-        grid-column: 1 / -1;
-        grid-row: 1;
-    }
-
-    .burger .food-picture {
-        height: 210px;
-    }
-
-    figcaption {
-        padding: 10px;
-    }
-
-    .card-number {
-        display: none;
+    .menu-panel > img {
+        height: clamp(175px, 45vw, 260px);
     }
 
     .visit {
@@ -357,14 +404,45 @@ footer a {
         grid-column: 1 / -1;
     }
 }
-.food-picture {
-    display: block;
-}
 
-.food-picture img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        padding: 12px 0;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        padding-inline: 5px;
+        font-size: 13px;
+    }
+
+    nav .order {
+        padding-inline: 9px;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .food-grid .burger {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .burger .food-picture {
+        height: 210px;
+    }
+
+    .food-card figcaption {
+        padding: 10px;
+    }
+
+    .card-number {
+        display: none;
+    }
 }
