@@ -1,26 +1,101 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Burgers, crispy fries, and cold milkshakes at Djursholmsgrillen.">
-    <title>Djursholmsgrillen</title>
+    <meta name="description" content="Find Djursholmsgrillen, check opening hours, and get directions.">
+    <title>Visit | Djursholmsgrillen</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header id="home">
+    <header>
         <nav aria-label="Main navigation">
-            <a class="logo" href="#home" aria-label="Djursholmsgrillen home">
-    <img src="images/burgerlogo.jpg" alt="">
-</a>
+            <a class="logo" href="index.html" aria-label="Djursholmsgrillen home">
+                <img src="images/burgerlogo.jpg" alt="">
+            </a>
 
-          <ul>
-            <li><a href="Home.html" aria-current="page">Home</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a class="active" href="visit.html">Visit</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a class="order" href="https://yabie.online/djursholmsgrillen/en">Order </a></li>
-    </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a class="active" href="Visit.html" aria-current="page">Visit</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a class="order"
+                       href="https://yabie.online/djursholmsgrillen/en"
+                       target="_blank"
+                       rel="noopener">
+                        Order <span aria-hidden="true">↗</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
+
+    <main class="info-page">
+        <section class="menu-hero" aria-labelledby="visit-title">
+            <p class="eyebrow">Djursholmsgrillen</p>
+            <h1 id="visit-title">Come <em>Visit</em></h1>
+        </section>
+
+        <div class="info-grid">
+            <section class="info-card info-primary" aria-labelledby="address-title">
+                <h2 id="address-title">Find the grill</h2>
+                <address>
+                    Vendevägen 8<br>
+                    Djursholm, Sweden
+                </address>
+
+                <a class="button"
+                   href="https://maps.google.com/?q=Vendev%C3%A4gen+8%2C+Djursholm"
+                   target="_blank"
+                   rel="noopener">
+                    Get directions <span aria-hidden="true">↗</span>
+                </a>
+            </section>
+
+            <section class="info-card" aria-labelledby="hours-title">
+                <h2 id="hours-title">Opening hours</h2>
+
+                <table class="hours-table" aria-labelledby="hours-title">
+                    <thead>
+                        <tr>
+                            <th scope="col">Days</th>
+                            <th scope="col">Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Monday–Sunday</th>
+                            <td>11 a.m.–9 p.m.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="takeaway-note">Order at the counter or call ahead for takeaway.</p>
+                <a class="info-link" href="tel:+46737876682">Call 073-787 66 82</a>
+            </section>
+        </div>
+
+        <iframe
+            class="visit-map"
+            title="Map showing Djursholmsgrillen on Vendevägen 8"
+            src="https://maps.google.com/maps?q=Vendev%C3%A4gen%208%2C%20Djursholm&amp;output=embed"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p class="footer-name">
+                Djursholmsgrillen <span aria-hidden="true">✦</span>
+            </p>
+            <div>
+                <h2 class="eyebrow">Contact</h2>
+                <a href="tel:+46737876682">073-787 66 82</a>
+                <a href="mailto:jon@djursholmsgrillen.se">jon@djursholmsgrillen.se</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
